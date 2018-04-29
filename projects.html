@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yue Wang</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ul {
+    list-style-type: none;
+    display:inline-flex;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+a:hover { 
+    background-color: #EEEEEE;
+}
+a:active {
+    color: #EEEEEE;
+}
+</style>
+
+<style>
+div.content {
+  padding: 16px;
+}
+
+
+.header {
+    padding: 0em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+.footer {
+    padding: 0em;
+    color: grey;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    padding: 20px;
+    font-family: Arial;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column4 {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column4 {
+    float: left;
+    width: 25%;
+}
+.column2{
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column2 {
+    float: left;
+    width: 50%;
+}
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="header" id="head">
+  <h1 style="font-family:'lucida grande';font-size:200%; id='home'" >Yue Wang</h1>
+
+  <ul>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="index.html">Home</a></li>
+   <li><a style="font-family:'lucida grande';font-size:80%;" href="experience.html">Experience</a></li>
+    <li><a style="font-family:'lucida grande';font-size:80%;" href="projects.html"><b>Projects</b></a></li>
+  <li><a style="font-family:'lucida grande';font-size:80%;" href="cv/cv.pdf">CV</a></li>
+     <!-- 
+Education, with pictures
+Conferences, with pictures
+Travel including places been to, would be better if have a world map
+-->
+
+
+</ul>
+  <hr>
+</div>
+  
+<!-- MAIN (Center website) -->
+<div class="content">
+
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column4">
+    <div class="content">
+      <img src="images/rayTracer.png" alt="Ray Tracer" style="width:200px; height:auto">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Ray Tracer</h3>
+      <p style="font-family:'lucida grande';font-size:80%;">An offline rendering prototype based on Smallpt. </p>
+      <p style="font-family:'lucida grande';font-size:80%;">Supported features including importance sampling, motion blur, path tracing, volumetric scattering, equal-angular volumetric importance sampling.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content">
+    <img src="images/fluid2d.gif" alt="fluid2d" style="width:200px; height:auto">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Fluid Simulation 2D</h3>
+      <p style="font-family:'lucida grande';font-size:80%;">One of the projects of COMP557.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content">
+    <img src="images/deepVis.gif" alt="deepVis" style="width:100%">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Deep Vis</h3>
+      <p style="font-family:'lucida grande';font-size:80%;">A visualization framework of relations of variables of multi-dimensional data. The example is based on soil sample data of north pole, we would like to explore the relations between soil attributes changes with depth of soil. Specific attributes could be selected for comparison. </p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content">
+    <img src="images/trees.png" alt="Mountains" style="width:100%">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Printable 3D Trees </h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> Project under supervision of Prof. Lin Lu. </p>
+      <p style="font-family:'lucida grande';font-size:80%;"> Helped on detecting fragile parts, adding and removing leaves for tree meshes to strenthen the structure for 3D printing.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column2">
+  <div class="content">
+    <img src="images/sphFluids.gif" alt="sphFluids" style="width:100%">
+    <h3 style="font-family:'lucida grande';font-size:80%;">Particle Based Fluid Simulation</h3>
+    <p style="font-family:'lucida grande';font-size:80%;">Implemented Smoothed Particle Hydrodynamics(SPH) that simulated fluid waves at real time.</p>
+    <p style="font-family:'lucida grande';font-size:80%;">Supported user interactions and different simulation models (faucet and dam).</p>
+  </div>
+  </div>
+<div class="column2"> 
+  <div class="content">
+    <img src="images/streamVis.gif" alt="Bear" style="width:100%">
+   <h3 style="font-family:'lucida grande';font-size:80%;">Streaming Data Visualization System</h3>
+   <p style="font-family:'lucida grande';font-size:80%;">Developed interactive framework for visualizing time-varying multi-variate data. Improved algorithm for mapping high-dimensional data into 2D while preserving the correlation between variables</p>
+    <p style="font-family:'lucida grande';font-size:80%;"> Won Honourable Mention Poster at IEEE Visualization Conference 2015, Chicago.</p>
+  </div>
+  </div>
+</div>
+<!-- END MAIN -->
+<div class="footer" style="font-family:'lucida grande';font-size:60%;">wangyuehi.github.io
+</div>
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("head");
+var sticky = header.offsetTop;
+
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
