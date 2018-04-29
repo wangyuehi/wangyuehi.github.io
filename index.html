@@ -2,7 +2,11 @@
 <html>
 <head>
 <title>Yue Wang</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -23,13 +27,90 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #EEEEEE;
+</style>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column4 {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column4 {
+    float: left;
+    width: 25%;
+}
+.column2{
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column2 {
+    float: left;
+    width: 50%;
+}
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
 }
 </style>
 
 </head>
 <body>
+
+
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
 
 <!-- ...............................This is the tabs...............................-->
 <ul>
@@ -52,11 +133,63 @@ Travel including places been to, would be better if have a world map
 <p style="font-family:'lucida grande';font-size:80%;">Montreal, Canada</p>
 <p style="color:blue;" >wangyuehi@gmail.com </p>
 
-<img src="images/test.png" alt="aaaaaaaa" width="154" height="142">
 
-<a href="https://www.w3schools.com">This is a link</a> 
+<!-- Portfolio Gallery Grid -->
 
+<div class="row">
+  <div class="column4">
+    <div class="content">
+      <img src="images/rayTracer.png" alt="Ray Tracer" style="width:200px; height:auto">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Ray Tracer</h3>
+      <p style="font-family:'lucida grande';font-size:80%;">An offline rendering prototype based on Smallpt. </p>
+      <p style="font-family:'lucida grande';font-size:80%;">Supported features including importance sampling, motion blur, path tracing, volumetric scattering, equal-angular volumetric importance sampling.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content">
+    <img src="images/fluid2d.gif" alt="fluid2d" style="width:200px; height:auto">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Fluid Simulation 2D</h3>
+      <p style="font-family:'lucida grande';font-size:80%;">One of the projects of COMP557.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content">
+    <img src="images/deepVis.gif" alt="deepVis" style="width:100%">
+      <h3 style="font-family:'lucida grande';font-size:80%;">Deep Vis</h3>
+      <p style="font-family:'lucida grande';font-size:80%;">A visualization framework of relations of variables of multi-dimensional data. The example is based on soil sample data of north pole, we would like to explore the relations between soil attributes changes with depth of soil. Specific attributes could be selected for comparison. </p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content">
+    <img src="images/treeMesh.jpg" alt="Mountains" style="width:100%">
+      <h3 style="font-family:'lucida grande';font-size:80%;">3D Printing Trees </h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> Project under Prof. Lin Lu. I was responsible for  detecting fragile parts, adding and removing leaves for tree meshes to strenthen the structure for 3D printing.</p>
+    </div>
+  </div>
 
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column2">
+	<div class="content">
+  	<img src="images/sphFluids.gif" alt="sphFluids" style="width:100%">
+  	<h3 style="font-family:'lucida grande';font-size:80%;">Particle Based Fluid Simulation</h3>
+  	<p style="font-family:'lucida grande';font-size:80%;">Implemented Smoothed Particle Hydrodynamics(SPH) that simulated fluid waves at real time.</p>
+  	<p style="font-family:'lucida grande';font-size:80%;">Supported user interactions and different simulation models (faucet and dam).</p>
+	</div>
+  </div>
+<div class="column2"> 
+	<div class="content">
+  	<img src="images/streamVis.gif" alt="Bear" style="width:100%">
+ 	 <h3 style="font-family:'lucida grande';font-size:80%;">Streaming Data Visualization System</h3>
+ 	 <p style="font-family:'lucida grande';font-size:80%;">Developed interactive framework for visualizing time-varying multi-variate data. Improved algorithm for mapping high-dimensional data into 2D while preserving the correlation between variables</p>
+  	<p style="font-family:'lucida grande';font-size:80%;"> Won Honourable Mention Poster at IEEE Visualization Conference 2015, Chicago.</p>
+	</div>
+	</div>
+</div>
+<!-- END MAIN -->
+</div>
 
 
 </body>
