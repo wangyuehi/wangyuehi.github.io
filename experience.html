@@ -152,12 +152,16 @@ td {
 
 </head>
 <body>
+ <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="scripts/datamaps.world.min.js"></script>
 
+ 
 <div class="header" id="head">
   <h1 style="font-family:'lucida grande';font-size:200%; id='home'" >Yue Wang</h1>
 
   <ul>
-      <li><a style="font-family:'lucida grande';font-size:80%;" href="#home">Home</a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="index.html">Home</a></li>
    <li><a style="font-family:'lucida grande';font-size:80%;" href="experience.html"><b>Experience</b></a></li>
     <li><a style="font-family:'lucida grande';font-size:80%;" href="projects.html">Projects</a></li>
   <li><a style="font-family:'lucida grande';font-size:80%;" href="cv/cv.pdf">CV</a></li>
@@ -174,10 +178,6 @@ Travel including places been to, would be better if have a world map
   
 <!-- MAIN (Center website) -->
 <div class="content">
-
-
-
-
 
 
 
@@ -213,7 +213,7 @@ Travel including places been to, would be better if have a world map
             <p> Sep 2012 - June 2016</p>
       <p>  Bachelor of Science, Shandong University</p>
 
-      <p>Major: Computer Science, Elite Class Gpa:  92.51/100  Rank: 1/33  </p>
+      <p>Major: Computer Science, Elite Class Gpa:  92.51/100  Rank: 1/30  </p>
 
       <p>Thesis Topic: High-dimensional Multi-variate Data Visualization, under supervision of Prof. Zhifang Jiang.</p>
       <p> Related courses: Funds. of Computer Graphics;  Data Visualization;   Image Processing;  Computing Systems
@@ -229,6 +229,22 @@ Travel including places been to, would be better if have a world map
     <th     style = "text-align:center;font-size:100%;" ><b>Work</b></th>
 <td>
     
+</td>
+  </tr>
+
+
+      <tr>
+    <th  style = "text-align:right;"><img src="images/MG_09931.jpeg" alt="UA" width="200" height="auto">
+</th>
+<td>
+      <p> July 2017- Mar 2018</p>
+    <p>3D Programmer Intern, La Forge,  Ubisoft Montreal</p>
+
+    <p> Implemented an cutting-edge GI algorithm and fully integrated into game engine</p>
+    
+    <p>Tested with game scenes on PC and PS4, explored use cases and optimized parameter</p>
+    
+ </p>
 </td>
   </tr>
 
@@ -248,27 +264,123 @@ Travel including places been to, would be better if have a world map
 </td>
   </tr>
 
+
 <tr>
-    <th     style = "text-align:center;font-size:100%;" ><b>Travel</b></th>
-<td>  </td>
+    <th     style = "text-align:center;font-size:100%;" ><b>Academic</b></th>
+<td>
+    
+</td>
+  </tr>
+
+      <tr>
+ <th style = "text-align:right;">
+</th> 
+<td >
+      <p> Oct 2015 - Poster speaker at IEEE Visualization  Conference, Chicago</p>
+    <p>Presented in Fast Forward Session, introduced my work in poster session.</p>
+
+    
+ </p>
+</td>
+  </tr>
+
+</table>
+
+<table style="margin: 0px auto;">
+
+<tr colspan="2">
+    <th colspan="2" style = " text-align:center;font-size:100%;" ><b>Travel</b></th>
+
+
+</tr>
+
+<tr colspan="2" >
+   
+  <th colspan="2" style = "text-align:center;">
+ <div id="container1"  style="posiiton:relative" width="400", height = "auto"></div>
+
+</th>
+ 
+<!--
+   <td >
+Domestic(China):Beijing, Nanjing, Shenzhen, Guangzhou, Shanghai, Suzhou, Jinan, Dalian, Qingdao...
+<br></br>
+Abroad: Chicago, Orlando, Greenville, Vancouver, Edmonton, Jasper, Toronto...
+  </td>
+-->
+
 
   </tr>
 
-  <tr>
 
-  <td colspan="2"></td>
 
-  </tr>
+
+
 
 
 </table>
 
 
 
-<div class="footer" style="font-family:'lucida grande';font-size:60%;">wangyuehi.github.io
-</div>
+<div class="footer" style="font-family:'lucida grande';font-size:60%;">wangyuehi.github.io</div>
 
 </div>
+ 
+
+
+
+
+
+</body>
+
+
+
+     <script>
+       //basic map config with custom fills, mercator projection
+      var map = new Datamap({
+        scope: 'world',
+        element: document.getElementById('container1'),
+        projection: 'mercator',
+        height: 180,
+
+        fills: {
+          defaultFill: '#ABDDA4',
+          lt50: 'rgba(0,244,244,0.9)',
+          gt50: 'red'
+        },
+        
+     
+      })
+      
+     map.bubbles([
+    {name: 'Beijing', latitude: 39.904200, longitude: 116.407396, radius: 5, fillKey: 'lt50'},
+    {name: 'Nanjing', latitude: 32.060255, longitude: 118.796877, radius: 5, fillKey: 'lt50'},
+    {name: 'Shenzhen', latitude: 22.543096, longitude: 114.057865, radius: 5, fillKey: 'lt50'},
+    {name: 'Guangzhou', latitude: 23.129110, longitude: 113.264385, radius: 5, fillKey: 'lt50'},    
+    {name: 'Shanghai', latitude: 31.230390, longitude: 121.473702, radius: 5, fillKey: 'lt50'},    
+    {name: 'Suzhou', latitude: 31.298974, longitude: 120.585289, radius: 5, fillKey: 'lt50'},    
+    {name: 'Jinan', latitude: 36.651200, longitude: 117.120095, radius: 5, fillKey: 'lt50'},    
+    {name: 'Dalian', latitude: 38.914003, longitude: 121.614682, radius: 5, fillKey: 'lt50'},
+    {name: 'Qingdao', latitude: 36.067108, longitude: 120.382609, radius: 5, fillKey: 'lt50'},
+    {name: 'Taian', latitude: 36.200252, longitude: 117.087614, radius: 5, fillKey: 'lt50'},
+
+    {name: 'Chicago', latitude: 41.878114, longitude: -87.629798, radius: 5, fillKey: 'lt50'},
+    {name: 'Orlando', latitude: 28.538335, longitude:-81.379236, radius: 5, fillKey: 'lt50'},
+    {name: 'Greenville', latitude: 34.852618, longitude: -82.394010, radius: 5, fillKey: 'lt50'},
+    {name: 'Vancouver', latitude: 49.282729, longitude: -123.120738, radius: 5, fillKey: 'lt50'},
+
+                    {name: 'Edmonton', latitude: 53.544389, longitude: -113.490927, radius: 5, fillKey: 'lt50'},
+
+                        {name: 'Jasper', latitude: 52.873383, longitude: -117.954294, radius: 5, fillKey: 'lt50'},
+                       { name: 'Montreal', latitude: 45.5016893, longitude: -73.567256, radius: 5, fillKey: 'gt50'},
+                       { name: 'Yellow Knife', latitude: 62.453972, longitude: -114.371789, radius: 5, fillKey: 'lt50'}
+                   
+     ], {
+       popupTemplate: function(geo, data) {
+         return "<div class='hoverinfo'>It is " + data.name + "</div>";
+       }
+     });
+     </script>
 
 <script>
 window.onscroll = function() {myFunction()};
@@ -285,5 +397,4 @@ function myFunction() {
   }
 }
 </script>
-</body>
 </html>
