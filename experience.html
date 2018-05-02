@@ -297,7 +297,7 @@ Travel including places been to, would be better if have a world map
 <tr colspan="2" >
    
   <th colspan="2" style = "text-align:center;">
- <div id="container1"  style="posiiton:relative" width="400", height = "auto"></div>
+ <div id="container1"  style="position: relative; width: 100%; max-height: 450px;"></div>
 
 </th>
  
@@ -377,7 +377,7 @@ Abroad: Chicago, Orlando, Greenville, Vancouver, Edmonton, Jasper, Toronto...
                    
      ], {
        popupTemplate: function(geo, data) {
-         return "<div class='hoverinfo'>It is " + data.name + "</div>";
+         return "<div class='hoverinfo'>" + data.name + "</div>";
        }
      });
      </script>
