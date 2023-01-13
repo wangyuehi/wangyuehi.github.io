@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yue&3D</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+  ul {
+    list-style-type: none;
+    display:inline-flex;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+  }
+
+  li {
+    float: center;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  a:hover { 
+    background-color: #EEEEEE;
+  }
+  a:active {
+    color: #EEEEEE;
+  }
+  </style>
+
+  <style>
+  div.content {
+    padding: 16px;
+    font-family:'lucida grande';font-size:70%
+  }
+
+
+  .header {
+    padding: 0em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+  }
+  .footer {
+    padding: 3em;
+    color: grey;
+    background-color: white;
+    clear: left;
+    text-align: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    padding: 20px;
+    font-family: Arial;
+  }
+
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+
+  .row {
+    margin: 8px -16px;
+  }
+
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column4 {
+    padding: 8px;
+  }
+
+  /* Create four equal columns that floats next to each other */
+  .column4 {
+    float: left;
+    width: 25%;
+  }
+  .column2{
+    padding: 8px;
+  }
+
+  /* Create four equal columns that floats next to each other */
+  .column2 {
+    float: left;
+    width: 50%;
+  }
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  table, th, td {
+    border: 1px solid white;
+    border-spacing: 20px;
+    margin:5px;
+  }
+  th{
+    padding: 5px;
+
+
+  }
+  td {
+    padding: 5px;
+    text-align: left;    
+
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="header" id="head">
+    <h1 style="font-family:'lucida grande';font-size:200%; id='home'" >Yue Wang</h1>
+    <ul>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="index.html">Home</a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="projects.html">Personal Projects</a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="publications.html"><b>Publications</b></a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="cv/cv.pdf">CV</a></li>
+    </ul>
+    <hr>
+  </div>
+  
+  <!-- MAIN (Center website) -->
+  <div class="content">
+
+    <table style="width:80%; margin: auto;">
+
+     <tr>
+      <th  style = "text-align:left;"><img src="images/publications/nonUniformPlacement.png" width="300" height="auto">
+      </th>
+      <td>
+        <p style="font-family:'lucida grande';text-align:left;"> <b>Fast Non-uniform Radiance Probe Placement and Tracing</b></p>
+        <p>Y. Wang, S. Khiat, P. G. Kry, D. Nowrouzezahrai</p>
+        <p><i>ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games 2019, Montreal, Canada</i></p>
+        <p style="font-family:'lucida grande';text-align:left;color:red;">Best Student Presentation</p>
+        <p> Contribution: </p>
+        <li>Non-uniform probe placement for full geometric coverage and reduce grazing angle sampling biases</li>
+        <li>Efficient probe ogannizing structure for fast run-time ray tracing</li>
+        <li>Adaptive probe ray tracer caches visibility information in a sparse voxel octree</li>
+        <li>Hierarchical-Z accelerated probe-space ray marching</li>
+        <p></p>
+        <a href="https://www.cs.mcgill.ca/~ywang411/ProjectPage/i3Dsubmission.pdf">[paper]</a><a href="https://youtu.be/jEiA3Cc8SVI">[video]</a>
+      </td>
+  </tr>
+
+     <tr>
+      <th  style = "text-align:left;"><img src="images/publications/probeVoronoi.png" width="300" height="auto">
+      </th>
+      <td>
+        <p style="font-family:'lucida grande';text-align:left;"> <b>Automatic Placement of Radiance Probes</b></p>
+        <p><i>Master's Thesis, M. Sc. McGill University, 2019</i></p>
+        <p> Contribution: </p>
+        <li>Overivew of probe based solutions in the game industry and rendering applications</li>
+        <li>Explored multiple solutions to generate skeleton from 3D geometry for candidate probe positions</li>
+        <li>Explored run-time optimizations for non-unform probe lookups</li>
+        <li>Provided extensive performance and memory comparisons in different style of geometries</li>
+        <p> </p>
+        <a href="https://escholarship.mcgill.ca/concern/theses/t148fk269">[full thesis]</a>
+      </td>
+  </tr>
+
+
+     <tr>
+      <th  style = "text-align:left;"><img src="images/publications/streamVIS.png" width="300" height="auto">
+      </th>
+      <td>
+        <p style="font-family:'lucida grande';text-align:left;"> <b>StreamVisND: Visualizing Relationships in  Streaming Multivariate  Data</b></p>
+        <p><i>IEEE Symposium on Visual Analytics Science and Technology 2015, Chicago, USA</i></p>
+        <p>S. Cheng, Y. Wang, D. Zhang, Z. Jiang, K. Mueller</p>
+        <p style="font-family:'lucida grande';text-align:left;color:red;">Honorable Mention</p>
+        <p> Contribution: </p>
+        <li>Provided multiple aspects for understanding the relations of high-dimensional multivariate data </li>
+        <li>Interactive highlighting for intuitive demonstration of time/variable corellation</li>
+        <p> </p>
+        <a href="https://www3.cs.stonybrook.edu/~mueller/papers/StreamVISFinal.pdf">[poster]</a>
+      </td>
+  </tr>
+</table>
+
+  <div class="footer" style="font-family:'lucida grande';font-size:60%;">wangyuehi.github.io</div>
+
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
