@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yue&3D</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+  ul {
+    list-style-type: none;
+    display:inline-flex;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+  }
+
+  li {
+    float: center;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  a:hover { 
+    background-color: #EEEEEE;
+  }
+  a:active {
+    color: #EEEEEE;
+  }
+  </style>
+
+  <style>
+  div.content {
+    padding: 16px;
+  }
+
+
+  .header {
+    margin: auto;
+    padding: 0em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+  }
+  .footer {
+    margin: auto;
+    padding: 0em;
+    color: grey;
+    background-color: white;
+    clear: left;
+    text-align: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    padding: 20px;
+    font-family: Arial;
+  }
+
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+
+  .row {
+    margin: 8px -16px;
+  }
+
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column4 {
+    padding: 8px;
+  }
+
+  /* Create four equal columns that floats next to each other */
+  .column4 {
+    margin: auto;
+    float: left;
+    width: 25%;
+  }
+  .column2{
+    padding: 8px;
+  }
+  .column2 {
+    margin: auto;
+    float: center;
+    width: 50%;
+    text-align: center;
+  }
+  .column1 {
+    margin: auto;
+    float: center;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+  }
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 100%;
+    }
+  }
+  </style>
+
+
+</head>
+<body>
+  <div class="header" id="head">
+    <h1 style="font-family:'lucida grande';font-size:200%; id='home'" >Yue Wang</h1>
+    <ul>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="index.html">Home</a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="projects.html"><b>Projects</b></a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="publications.html">Publications</a></li>
+      <li><a style="font-family:'lucida grande';font-size:80%;" href="cv/cv.pdf">CV</a></li>
+    </ul>
+    <hr>
+  </div>
+  <!-- MAIN (Center website) -->
+  <div _class="content">
+
+    <!-- Portfolio Gallery Grid -->
+
+    <div class="row">
+      <div class="column1">
+        <div class="content">
+         <h3 style="font-family:'lucida grande';font-size:80%;">Code Projects</h3>
+       </div>
+     </div>
+   </div>
+
+   <div class="row">
+    <div class="column1">
+      <div class="content">
+        <img src="images/rayTracer.png" alt="Ray Tracer" style="width:200px; height:auto">
+        <img src="images/ao.png" alt="Ray Tracer" style="width:200px; height:auto">
+        <img src="images/motionblur.png" alt="Ray Tracer" style="width:200px; height:auto">
+        <img src="images/singleScatter.png" alt="Ray Tracer" style="width:200px; height:auto">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Path Tracer</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">An offline physically-based renderer. </p>
+        <p style="font-family:'lucida grande';font-size:80%;">Supported features including importance sampling, motion blur, path tracing, volumetric scattering, equal-angular volumetric importance sampling. Source code <a href="https://github.com/wangyuehi/VolumeSingleScattering">here</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column1">
+      <div class="content">
+        <img src="images/shadowmap.gif" alt="shadowmap" style="width:80%">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Shadow map</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">Shadow map demo with dynamic objects and dynamic lights.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column1">
+      <div class="content">
+        <img src="images/collision.gif" alt="collision" style="width:80%">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Rigid body collision</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">Rigid body motion and collision simulation in 2D.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column1">
+      <div class="content">
+        <img src="images/fluid2d.gif" alt="fluid2d" style="width:80%">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Eulerian fluid simulation 2D</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">Grid based fluid simulation with interactions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column1">
+      <div class="content">
+        <img src="images/sphFluids.gif" alt="sphFluids" style="width:100%">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Particle Based Fluid Simulation</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">Implemented Smoothed Particle Hydrodynamics(SPH) that simulated fluid waves at real time.</p>
+        <p style="font-family:'lucida grande';font-size:80%;">Supported user interactions and different simulation models (faucet and dam). Source code <a href="https://github.com/wangyuehi/ParticleBasedFluidSim">here</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column1">
+      <div class="content">
+        <img src="images/deepVis.gif" alt="deepVis" style="width:100%">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Deep Vis</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">A visualization framework of relations of variables of multi-dimensional data. The example is based on soil sample data of north pole, we would like to explore the relations between soil attributes changes with depth of soil. Specific attributes could be selected for comparison. Source code <a href="https://github.com/wangyuehi/DeepVis">here</a>. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column1"> 
+      <div class="content">
+        <img src="images/streamVis.gif" alt="Bear" style="width:100%">
+        <h3 style="font-family:'lucida grande';font-size:80%;">Streaming Data Visualization System</h3>
+        <p style="font-family:'lucida grande';font-size:80%;">Developed interactive framework for visualizing time-varying multi-variate data. Improved algorithm for mapping high-dimensional data into 2D while preserving the correlation between variables. Source code <a href="https://github.com/wangyuehi/StreamVisDataExplorer">here</a>.</p>
+        <p style="font-family:'lucida grande';font-size:80%;"> Won Honourable Mention Poster at IEEE Visualization Conference 2015, Chicago.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column1">
+    <div class="content">
+      <img src="images/trees.png" alt="Mountains" style="width:80%">
+      <h3 style="font-family:'lucida grande';font-size:80%;"> 3D Printable Trees </h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> Analysis of fragile parts using Finite-Element Method (FEM) given a 3D tree model, which is then used to strengthen the structure for 3D printing.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column1">
+    <div class="content">
+     <h3 style="font-family:'lucida grande';font-size:80%;">Blender Projects</h3>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="column1">
+    <div class="content">
+      <img src="images/mofumofu.png" alt="Mountains" style="width:80%">
+      <h3 style="font-family:'lucida grande';font-size:80%;"> Mofumofu</h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> .</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column1">
+    <div class="content">
+      <img src="images/PuddingFullRenderNPRVSPBR1.png" alt="Mountains" style="width:80%">
+      <h3 style="font-family:'lucida grande';font-size:80%;"> NPR pudding</h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> .</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column1">
+    <div class="content">
+      <img src="images/gifDuck.gif" alt="Mountains" style="width:80%">
+      <h3 style="font-family:'lucida grande';font-size:80%;"> Duck in W</h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> .</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="column1">
+    <div class="content">
+      <img src="images/terrainRender4.png" alt="Mountains" style="width:80%">
+      <h3 style="font-family:'lucida grande';font-size:80%;"> Terrain</h3>
+      <p style="font-family:'lucida grande';font-size:80%;"> .</p>
+    </div>
+  </div>
+</div>
+
+<!-- END MAIN -->
+<div class="footer" style="font-family:'lucida grande';font-size:60%;">wangyuehi.github.io
+</div>
+
+</div>
+
+
+</body>
+
+
+<script>
+function insertProject(title, descrptions, imageNames)
+{
+  projectString = `<div class="row"><div class="column1"><div class="content">`;
+
+  imageSize = imageNames.length > 1 ? 40 : 80;
+  for(imageName of imageNames)
+  {
+    projectString += `<img src="images/${imageName}" style="width:${imageSize}%">`;
+  }
+
+  projectString += `<h3 style="font-family:'lucida grande';font-size:80%;"> ${title}</h3>`;
+
+  for(descrption of descrptions)
+  {
+    projectString += `<p style="font-family:'lucida grande';font-size:80%;"> ${descrption}</p>`;
+  }
+
+  projectString += `</div></div></div>`;
+
+  document.getElementById("head").innerHTML += projectString;
+}
+
+insertProject( "Terrain1", ["111","222"], ["terrainRender4.png", "terrainRender4.png"]);
+insertProject( "Terrain2", "", ["terrainRender4.png"]);
+
+</script>
+</html>
