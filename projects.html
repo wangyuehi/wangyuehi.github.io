@@ -185,7 +185,7 @@ class ProjectData
 
     for(let descrption of this.descrptions)
     {
-      projectString += `<p style="font-family:'lucida grande';font-size:80%;"> ${descrption}</p>`;
+      projectString += `<p style="font-family:'lucida grande';font-size:80%;" width="500"> ${descrption}</p>`;
     }
 
     projectString += `</div></div></div>`;
@@ -210,9 +210,9 @@ new ProjectData("Eulerian Fluid Simulation 2D", ["grid-Based 2D fluid sim &middo
 
 new ProjectData("Particle Based Fluid Simulation", ["SPH (Smoothed Particle Hydrodynamics) &middot real-time &middot collisions", " <a href=\"https://github.com/wangyuehi/ParticleBasedFluidSim\">source code</a>"],["sphFluids.gif"]),
 
-new ProjectData("Deep Vis", ["relation visualization &middot multi-dimensional data &middot north pole soil data", "<a href=\"https://github.com/wangyuehi/DeepVis\">source code </a>"], ["deepVis.gif"]),
+new ProjectData("Deep Vis", ["relation visualization &middot multi-variate data & Multidimensional scaling (MDS)", "<a href=\"https://github.com/wangyuehi/DeepVis\">source code </a>"], ["deepVis.gif"]),
 
-new ProjectData("Streaming Data Visualization System", ["interactive framework &middot time-varying multi-variate data &middot variable correlation", "  <a href=\"https://github.com/wangyuehi/StreamVisDataExplorer\">source code</a> "], ["streamVis.gif"]),
+new ProjectData("Streaming Data Visualization System", ["time-varying multi-variate data &middot variable correlation &middot interactive framework  ", "  <a href=\"https://github.com/wangyuehi/StreamVisDataExplorer\">source code</a> "], ["streamVis.gif"]),
 
 new ProjectData("3D Printable Trees ", ["FEM(Finite-Element Method) &middot 3D printing"], ["trees.png"]),
 ];
@@ -226,10 +226,12 @@ BlenderProjects =
 [
 new ProjectData("Blender Projects", [], []),
 
+new ProjectData("Terrain", ["procedural scattering &middot cloth sim &middot volumetric"], ["terrainRender4.png"]),
+new ProjectData("Duck", ["fliud sim &middot object constraints"], ["gifDuck.gif"]),
 new ProjectData("Mofumofu (fluffy)", ["realistic fur &middot strand-based hair"], ["mofumofu.png"]),
 new ProjectData("NPR pudding", ["NPR (non-photorealistic rendering &middot curve objects(Bezier/Nurbs/Paths)"], ["PuddingFullRenderNPRVSPBR1.png"]),
-new ProjectData("Duck", ["fliud sim &middot object constraints"], ["gifDuck.gif"]),
-new ProjectData("Terrain", ["procedural scattering &middot cloth sim &middot volumetric"], ["terrainRender4.png"]),
+
+
 ];
 
 
