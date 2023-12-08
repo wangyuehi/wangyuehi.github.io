@@ -169,25 +169,32 @@ class ProjectData
     this.title = title;
     this.descrptions = descrptions;
     this.imageNames = imageNames;
+    this.isSectionTitle = this.descrptions.length == 0 && this.imageNames.length == 0;
   }
 
   print()
   {
     let projectString = `<div class="row"><div class="column1"><div class="content">`;
 
-    let imageSize = this.imageNames.length > 1 ? 40 : 80;
-    for(let imageName of this.imageNames)
+    if(this.isSectionTitle)
     {
-      projectString += `<img src="images/${imageName}" style="width:${imageSize}%">`;
+        projectString += `<h3 style="font-family:'lucida grande';font-size:100%;"> ${this.title}</h3>`;
     }
-
-    projectString += `<h3 style="font-family:'lucida grande';font-size:80%;"> ${this.title}</h3>`;
-
-    for(let descrption of this.descrptions)
+    else
     {
-      projectString += `<p style="font-family:'lucida grande';font-size:80%;" width="500"> ${descrption}</p>`;
-    }
+        let imageSize = this.imageNames.length > 1 ? 40 : 80;
+        for(let imageName of this.imageNames)
+        {
+          projectString += `<img src="images/${imageName}" style="width:${imageSize}%">`;
+        }
 
+        projectString += `<h3 style="font-family:'lucida grande';font-size:80%;"> ${this.title}</h3>`;
+
+        for(let descrption of this.descrptions)
+        {
+          projectString += `<p style="font-family:'lucida grande';font-size:80%;" width="500"> ${descrption}</p>`;
+        }
+    }
     projectString += `</div></div></div>`;
 
     document.getElementById("projectContent").innerHTML += projectString;
@@ -226,10 +233,11 @@ BlenderProjects =
 [
 new ProjectData("Blender Projects", [], []),
 
-new ProjectData("Terrain", ["procedural scattering &middot cloth sim &middot volumetric"], ["terrainRender4.png"]),
+new ProjectData("Orchid", ["Stylized rendering &middot Traditional Chinese painting (Guo Hua)"], ["chinese_ink_orchid.gif"]),
+new ProjectData("Terrain", ["procedural scattering (scatter5) &middot cloth sim &middot volumetric"], ["terrainRender4.png"]),
 new ProjectData("Duck", ["fliud sim &middot object constraints"], ["gifDuck.gif"]),
 new ProjectData("Mofumofu (fluffy)", ["realistic fur &middot strand-based hair"], ["mofumofu.png"]),
-new ProjectData("NPR pudding", ["NPR (non-photorealistic rendering &middot curve objects(Bezier/Nurbs/Paths)"], ["PuddingFullRenderNPRVSPBR1.png"]),
+new ProjectData("NPR pudding", ["NPR &middot curve objects(Bezier/Nurbs/Paths)"], ["PuddingFullRenderNPRVSPBR1.png"]),
 
 
 ];
