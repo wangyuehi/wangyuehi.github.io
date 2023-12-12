@@ -40,7 +40,6 @@
     padding: 16px;
   }
 
-
   .header {
     margin: auto;
     padding: 0em;
@@ -133,10 +132,18 @@
   }
   </style>
 
+<style>
+.zoom {}
+.zoom:hover {
+  transform: scale(1.3);
+}
+</style>
+
 
 </head>
 <body>
   <div class="header" id="head">
+    
     <h1 style="font-family:'lucida grande';font-size:200%; id='home'" >Yue Wang</h1>
     <ul>
       <li><a style="font-family:'lucida grande';font-size:80%;" href="index.html">Home</a></li>
@@ -155,7 +162,6 @@
 </div>
 
 </div>
-
 
 </body>
 
@@ -185,7 +191,14 @@ class ProjectData
         let imageSize = this.imageNames.length > 1 ? 40 : 80;
         for(let imageName of this.imageNames)
         {
-          projectString += `<img src="images/${imageName}" style="width:${imageSize}%">`;
+          if(imageName.endsWith(".mp4"))
+          {
+            projectString +=  `<video width="${imageSize}%" controls autoplay loop><source src="images/${imageName}" type="video/mp4"  class="zoom">Your browser does not support the video tag.</video>`;
+          }
+          else
+          {
+            projectString += `<img src="images/${imageName}" style="width:${imageSize}%" class="zoom">`;
+          }
         }
 
         projectString += `<h3 style="font-family:'lucida grande';font-size:80%;"> ${this.title}</h3>`;
@@ -233,15 +246,14 @@ BlenderProjects =
 [
 new ProjectData("Blender Projects", [], []),
 
-new ProjectData("Orchid", ["Stylized rendering &middot Traditional Chinese painting (Guo Hua)"], ["chinese_ink_orchid.gif"]),
+new ProjectData("Chinese traditonal painting of landscape", ["geometry nodes &middot procedural landscape generation"], ["mountainsv2.mp4"]),
+new ProjectData("Orchid", ["stylized rendering &middot traditional Chinese painting (Guo Hua)"], ["orchidv3.mp4"]),
 new ProjectData("Terrain", ["procedural scattering (scatter5) &middot cloth sim &middot volumetric"], ["terrainRender4.png"]),
 new ProjectData("Duck", ["fliud sim &middot object constraints"], ["gifDuck.gif"]),
 new ProjectData("Mofumofu (fluffy)", ["realistic fur &middot strand-based hair"], ["mofumofu.png"]),
 new ProjectData("NPR pudding", ["NPR &middot curve objects(Bezier/Nurbs/Paths)"], ["PuddingFullRenderNPRVSPBR1.png"]),
 
-
 ];
-
 
 for (let project of BlenderProjects)
 {
